@@ -16,6 +16,9 @@ module.exports = function (sails, dir) {
             if (_.isArray(a)) {
                 return a.concat(b);
             }
+			if (b instanceof Buffer) {
+				return b;
+			}
         });
     });
 };
